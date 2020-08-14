@@ -1,0 +1,16 @@
+python encode_faces.py --dataset dataset --encodings encodings.pickle
+
+python recognize_faces_image.py --encodings encodings.pickle \
+	--image examples/example_01.jpg
+
+python recognize_faces_video.py --encodings encodings.pickle \
+	--output output/webcam_face_recognition_output.avi --display 1
+
+python recognize_faces_video_file.py --encodings encodings.pickle \
+	--input videos/example_02.mp4 --output output/example_02_output.avi \
+	--display 1
+	
+	
+python recognize_faces_video_file.py --encodings encodings.pickle \
+	--input videos/himani_video.mp4 --output output/himani_output.avi \
+	--display 1
